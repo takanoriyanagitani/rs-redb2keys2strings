@@ -1,0 +1,39 @@
+[package]
+name = "rs-redb2keys2strings"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[[bin]]
+name = "redb2keys2strings"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+panic = "forbid"
+
+[dependencies.serde_json]
+version = "1.0.151"
+default-features = false
+features = [
+  "std",
+]
+
+[dependencies.redb]
+version = "4.3.0"
+default-features = false
+features = [
+  "std",
+]
