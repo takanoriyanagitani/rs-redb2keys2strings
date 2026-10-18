@@ -3,7 +3,15 @@ name = "rs-redb2keys2strings"
 version = "0.1.0"
 edition = "2024"
 
+description = "Fetch values from redb database using stdin keys"
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-redb2keys2strings"
+homepage = "https://github.com/takanoriyanagitani/rs-redb2keys2strings"
+documentation = "https://docs.rs/rs-redb2keys2strings/latest"
+keywords = ["redb", "json", "convert", "wasi", "string"]
+
 exclude = [
+  "redb2keys2strings.wasm",
 ]
 
 [profile.release-wasi]
